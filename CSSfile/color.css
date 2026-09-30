@@ -1,0 +1,24 @@
+/* color{
+      this properties allow us to define colors in backgrounds,text colors,and 
+      overalll ui colors 
+      we can define coors in the following ways {
+         RGB(RGBA)>RED,GREEN,BLUE>>WE HAVE A VAST NUMBER OF COLORS >256
+         COLOR PROEPERTY VALUE{
+            COLOR:NAME OF COLOR:
+         }
+         HEX>>THIS USES THE HEXAGONAL COLOR CODES >>A COMBINATION OF SPECIAL
+          CHARACTERS FORMING COLORS 
+   {#6da832}
+         HSL(HSLA)>>WHERE WE USE HUE ,SATURATION ,LUMINANCE TO DEFINE COLORS 
+      }
+
+   }
+
+   DISPLAY PROPERTIES{
+      display prpoperties areused to control the strucutre of content
+       in what ordr they folow 
+      we use two properties to achieve this {
+         flex >>flexible containers
+         grid>>grid templates (rows,columns)
+      } 
+*/

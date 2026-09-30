@@ -1,0 +1,172 @@
+<!--   https 
+  >>this referes to hypertext transfer protocol secure, which is a protocol used for secure 
+  communication over the internet. It encrypts the data being transmitted between the client and server,
+   ensuring that sensitive information is protected from unauthorized access.   
+  introduction to web dev {
+    langauages(html)
+    with html 5 we are able to create and strucutre secure content 
+     https is stateless >>every request is different form the other even if they are shared form the same client and server. with the same information 
+
+  }
+  in html it stands for HYPER TEXT MARKUP LANGUAGE (
+    THIS is one of the markup langauge used in web strucutre ,another one is XML 
+    IT USES TAGS TO STRUCTURE THE CONTENT IN THE BROWSER 
+    THIS TAGS ARE USED TO CREATE ELEMENTS SUCH AS HEADINGS, PARAGRAPHS, IMAGES, LINKS, AND FORMS AND THEEY HAVE OPENING AND CLOSING COUNTERPARTS 
+    eVERY OPENING TAG SHOULD HAVE A CORRESPONDING CLOSING TAGS WITH GREATER THAN AND LESS THAN SYMBOL ,EXCEPT THE VOID TAGS WHICH ONLUY HVE OPENING TAGS 
+  )
+
+
+  HTML STRUCUTRE IT ELF {
+       <!DOCTYPE html> IT IS USED TO INDENTIFY THE FILE OR DOCUMNET AS A HTML DOCUMENT EXCLUSIVELY (WE TELL THE IDE ,WE USE TO ACCESS HTML TAGS VIA JS)
+       ITS THE ONLY TAG THAT IS OUTSIDE THE HTML TAGS 
+     <html lang="en"> THEY ARE USED TO ENCLOSE ALL THE OTHER TAGS AND CONTENT FOR STRUCTURING
+           <head>THE TAGS THAT LINKS IT ALL (EXTERNAL RESOURCES ,INTERNAL RESOURCES AND FILES ARE LNKED HERE EG META TAGS ,FONT TAGS )
+
+            EVERYTHING ELSE IS NOT VISIBLE TO THE USER UNLESS ITS INSIDE THE BODY TAGS 
+               <body>IT HOLDS THE DUNAMIC OR STAIC CONTENT THAT IS STYLED VIA TAGS 
+
+ shortcut is shift +1 then press enter 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  
+ </body>
+ </html>
+
+  }
+  OUR TAGS FOR TODAY WILL BE {HEADINGS 
+,P[ARAPGRAPHS,
+SPAN,
+DIVS,
+LISTS 
+]}
+
+HEADING TAGS {
+ this are tags that are used to defne the heading and important contnet 
+ they are 6 in number that follow a hierachy (from top tp bottom and they {decrease in size as they go downwards })
+ we use the h1,h2,h3,h4,h5,h6 to define them 
+}
+Paragraph tags >this are used to ecnlose content that is enormous for a heading tag ,heading descritpive texts 
+it is defined by the p 
+
+span>>this is a tag that is used to hold minimal descriptive content eg prices ,kshs 1000
+
+bold and strong tag >>this two tags are used to bold contgent (MS word bold) they are defined by tagname b(non semantic) and strong(semantc)
+italic and emphasize>>this are used to italisize contnet (ms I) they are defined by i (non semantic) em(semantic)
+the break tag this is one of the void tags and its denoted by <br>it is used to break the content width of another tag -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   </head>
+   <body>
+    
+    <h1>Hello, World!</h1>
+    <h2>Hello two</h2>
+    <h3>Hello three</h3>
+    <h4>Hello four</h4>
+    <h5>Hello five</h5>
+    <h6>Hello six</h6>
+
+    <p>Hello my name is Peter and i am a fullstack web developer with five years of experience in the field of software </p>
+    
+    <h2>Shoes</h2>
+    <span>Ksh.999</span> <br>
+
+    <b>My name is MEE</b> <br>
+
+    <strong>I am 6,3 ft tall</strong> <br>
+
+    <i>hello</i> <br>
+
+    <em>emphasize</em> <br>
+<!-- 
+    // define a headin tag with your nam e
+    //define a paragraph tag with your description 
+    in the paragraph tag bold you r name and italisize your carreer 
+   
+   INLINE VS BLOCKLEVEL ELEMENTS {
+    inLINE ELEMENTS >>THIS ARE ELEMENTS THAT OCCUPY THE SPACE AROUND THEMSELVES ONLY 
+    WHILE BLOCK LEVEL ELEMENTS ARE ELEMENTS THAT OCCUPY THE ENTIRE WIDTH OF THE WEBPAGE 
+    {
+      WE CAN HAVE BLOCK LEVEL ELEMENTS CONTAINING OTHER BLOCK LEVEL ELEMENTS AS WELL AS THEM CONTAINING INLINE LEVEL ELEMENTS 
+      BUT WE CANNOT HAVE AN INLINE LEVEL ELEMENT CONTAINING A BLOCK LEVEL ELEMENT 
+      {
+        WE CAN ONLY HAVE AN INLINE CONTAINING AN INLINE AS A CHILD TAG 
+
+      }
+    }
+   }
+   div/section (block level elements are used to partition and strucutre the webpage )
+  //BLOCK LEVEL ELEMENTS {
+    div,p,h,article,header,nav,footer,aside,section,fieldset etc 
+
+  } inline elements {
+    i,b,strong,em,img,span,video,etc
+  }
+
+
+ -->
+  <h1 style="background-color: aqua;">Hello this is my day 2</h1>
+
+  <span style="background-color: bisque;">i want money 1000</span>
+<br>
+  <i style="background-color: brown;">hello  <b style="background-color: darkgreen;">what a great day </b> </i>
+<br>
+
+  <div style="background-color: red;padding: 30px;">
+
+    <h3 style="background-color: blue;">i am heding three</h3>
+
+    <div style="background-color: magenta;padding: 30px;">
+      <p>this is wonderful</p>
+    </div>
+    <div style="background-color: yellow;">
+      <h4>I am heading 4</h4>
+      <p>this is what i say <b>is good</b>with been a <em>fullstack engineer</em> </p>
+    </div>
+
+  </div>
+   </body>
+   </html>
+
+//Semantic means structure>> and to structure content means to have content 
+{ we have welll layed out partitions 
+this is gppd on websites  SEO (Search Engine Optimization) and readability 
+as opposed  to non semantic tags ( do not follow a structure such as divs
+)
+divs strucure is the non semantic way of structuring content
+where else the semantic tags are used to structure content
+They include:
+     header>> this is used to house the navigation and anchor links as well
+     as oher links to socials  and handles logos
+
+     nav>>it contains the navigation component of the website the anchor links, lists
+
+     articles>> this is used to structure content that cannot change  or was cited eg blog content , event content as opposed to its semantic p tag
+
+     main>> this contants the dynamic data that is rendered to users
+
+     section>> this didvided the website into known and structured section {
+        about section
+        services section
+        a hero section
+
+        mostly in one pager portfolio websites linked bby ids
+
+     }
+     Footer>> 
+         The footer holds the additional navigation links to other resources 
+         the newsletter
+         the subscription 
+         the media handles
+    
+

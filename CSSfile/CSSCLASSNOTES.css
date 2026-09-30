@@ -1,0 +1,329 @@
+/*What is  CSS >> this refers to cascanding style sheet {it is used for styling content on the web>>
+mostly html content
+Css styling goes step by step by tags { 
+    every html tag that need styling has to have a selector 
+
+    css has various frameworks for styling {
+        a framework is a pre-equiped package that has
+        classes for csss ,>> all you is to id import the syles
+        an example of a framework is bootsrap and tailwind
+    }
+     
+}
+
+
+to link html to css we use three ways{
+    inline styling css >> this is where css is embedded in line with html
+    tags as an attribute(style attribute)
+    internal styling css >> this is where css is embedded in the head of the html document
+                           (internal voa the .css file extension)
+    external styling css >> this is where css is in a separate file and linked to the html document
+                         (recommended version as it allows asynchronous)
+                          
+    
+}
+*/
+
+/* >>this is the relative dimension of the display; height */
+}
+
+color{
+    this properties allow us to define colors in backgrounds, text colors, and
+    overalll ui colors
+    we can define coors in the following ways {
+        RGB(RGBA)>RED,GREEN,BLUE>>WE HAVE A VAST NUMBER OF COLORS >256
+        COLOR PROEPERTY VALUE{
+            COLOR:NAME OF COLOR;
+        }
+        HEX>>THIS USES THE HEXAGONAL COLOR CODES >>A COMBINATION OF SPECIAL
+        CHARACTERS FORMING COLORS
+{#6da032}
+        HSL(HSLA)>>WHERE WE USE HUE, SATURATION, LUMINANCE TO DEFINE COLORS
+    }
+}
+
+
+/*/box model >>{
+    Literally evrything in html is a box structure (rectangular container)
+    from this we get the box model >>refers to how we defne the tags in html based on four aspects {
+        margin >>the space between borders is called margin and it spans in four directions:
+                   margin top: space btwn tags top
+                   margin-bottom: space btwn tags bottom
+                   margin-left: space btwn tags left
+                   margin-right: space btwn tags right
+    }
+    the shorthand reputation for defining margin in one line {
+        margin: top right bottom left;
+    }             
+ margin: 10px 20px 30px 40px; >>this means top margin is 10px, right margin is 20px, bottom margin is 30px, left margin is 40px
+ margin:10px 30px; >> one liner to position margin top/bottom and left/right
+                  
+ padding:the space between contnt and the border inside the tag ; {
+    it has for dimensions namely {
+        padding-top: space to the top of the content and border top
+        padding-bottom: space to the bottom of the content and border bottom
+        padding-left: space to the left of the content and border left
+        padding-right: space to the right of the content and border right
+    }
+    one line of equal padding by stating{
+        padding:30px>>uniform padding across all sides
+    }
+ }
+  border: this refers to the line that enclosed a tag
+it has various properties as folows {
+      width: defined bt pixel
+      color: defined by color
+      nature: defined by how you want the inline to appear(dotted,underline ..)
+border radius>> this property allows one curve the dimensions of a box into shape {
+       from a box shap to circle, triangle,sphere
+        with the following properties {
+            border-top-right-radius
+            border-top-left-radius
+            border-bottom-left-radius
+        }
+}   
+}
+
+        content: ;
+    }
+}
+
+DISPLAY PROPERTIES
+    display prpoperties areused to control the strucutre of content
+    in what ordr they folow
+    we use two properties to achieve this {
+        flex >>flexible containers
+        grid>>grid templates (rows,columns)
+    }
+    Display>> refers to how we structur content and the direction it follows {
+        by defaul the display allows away block
+        
+but to create responsiv and dynamic structures we  have to be flexible hence the other displays} 
+   
+  flex>> this type of display allows us to arrange elements in flexible containers
+  this are properties of display flex{
+     display; flex: 
+     flex- direction{
+        by default flex is in a row direction but we can change that to go in a column aas folows{
+        flex-direction: column;
+        to add  to this the row and column can span in a reverse directly where 
+        the first element can be the last element
+        flex-direction : column-reverse;>> reverse to the direction of the column
+        flex-direction: row-reverse;>> reverse to the row direction
+         
+
+        to render responsivenes in soe gadgets  we wrap items in flexbox using 
+        flex-wrap property {
+            flex-wrap:wrap;
+             flex-wrap;no-warp;
+             flex-wrap:wrap-reverse;
+
+
+
+    /* ASSIGNMENT 
+        flex shrink;>> controls how much a flex item is allowed to shrink 
+        when there isn't enough space in the flex container.
+        flex-shrink` → how much an item **shrinks** when space is tight
+        -----example HTML------
+        <div class="container">
+        <div class="box box1">1</div>
+       <div class="box box2">2</div>
+       <div class="box box3">3</div>
+            </div>
+        -----CSS------
+        .container {
+  display: flex;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+}
+
+.box1 {
+  background: tomato;
+  flex-shrink: 1; ( will shrink normally )
+}
+
+.box2 {
+  background: gold;
+  flex-shrink: 0; ( will NOT shrink )
+}
+
+.box3 {
+  background: skyblue;
+  flex-shrink: 2; will shrink twice as fast as box1 
+}
+
+
+
+/*flex-grow>>controls how much a flex item grows to fill any extra space in the flex container.
+          >it ctrl how much an item expands into extra space
+----------Example Html---------
+<div class="container">
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+</div>
+-------Css--------
+.container {
+  display: flex;
+  width: 600px;
+  border: 2px solid black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.box1 {
+  background: tomato;
+  flex-grow: 1; ( grows normally }
+}
+
+.box2 {
+  background: gold;
+  flex-grow: 0; ( will NOT grow)
+}
+
+.box3 {
+  background: skyblue;
+  flex-grow: 2; (grows twice as fast as box1 )
+}
+
+
+
+justify-content>>>>decides where flex items sit along the main direction of the container usually left to right.
+It only matters when there's extra empty space in the container.
+The main values:
+flex-start — items stay at the start (this is the default)
+flex-end — items move to the end
+center — items sit in the middle
+space-between — items spread out, with space only between them (none at the edges)
+space-around — items get space on both sides, so edges have a little space too
+space-evenly — all the spacing is equal, including the edges
+
+Simple way to remember it:
+"justify-content decides where the empty space goes."
+------example html---
+<div class="container">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+--------css------
+.container {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  border: 2px solid black;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background: skyblue;
+}
+
+
+Flex alignment {
+We have used this properties in our projects{ 
+first of all we justify the content { 
+    it can go in three ways {
+Space-between>> leaving a space between two or more flex boxes having them 
+seperated in both ends
+space-evenly>> we have our flex elements distributed evently leaving 
+an equal gap between themselves
+space-around>> leaving an equal space around our flex elements
+( the content and the border)
+align-items>> this is used to align our content to be desired to have them
+in straight position
+center>> used to align items to the center
+flex- start>> we align items on the left side
+flex-end>> we align items to the right
+baseline>> align items to the bottom
+
+
+There are various properties used  to control responsiveness and they include {
+Flex-wrap>>>> this the wrap that enclosed items in a container to make it dynamic inflow { 
+once a container is shrinked or grown , the items go with the motion)
+  
+in here we have {
+flex warp: wrap;
+flex-rap: no wrap;
+flex-warp: wrap- reverse;
+}
+
+responsive design {
+
+to make sure that our applivcation are generally dynamic to various devices
+css has inbuilt methods to do that via what we call media queries{
+media queries are points that make sure we have responsive design by changing styles of components
+on various points specified {
+the syntax media queries is given by 
+@media screen(max-width/min-width()){
+//css. code goes here
+}
+
+one can navigate from desktop to mobile or you can start fro mobile to desktop design {
+we play with display
+}
+}
+
+animations { refers to changing frames of motion using various properties that allows us to indure the effects of motion
+a frame>> sections combined together to from trasitions that induce motion
+we use what we call @keyframes property to induce animations
+
+natively there are two ways to use it {
+using the  
+from....... to keyword which limit the user
+using percentage  {
+using---100% which offers more flexibility {
+at each percentage you can give a new property {
+n/b>> the keyframe name should be the name of the animation {
+the same name used in the keyframe be used in the css value property under the target component
+using the animation keyword
+
+*/
+@keyframes slidein {
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: yellow;
+  }
+  
+}
+
+
+
+
+
+positions {
+  positions are a css property that control the dynamic wheere and when an element is going to be in a webpage {
+    we have various positions in css include{
+        STATIC>> THIS IS DEFAULT POSITION OF HTML ELEMENT IN APAGE (FIXED UNLESS MOTION IS INDUCED>>SCROLL)
+        RELATIVE>>IN THIS POSITION ELEMENTS IN RELATION TO ITSELF AROUND THE BODY OR container;
+          ABSOLUTE>>THIS POSTION IS ONE THAT IS CONTROLLED BY A PARENT BEEN IN A POSITION RELATIVE {
+            THE CHILD IN A POSITION ABSOLUTE MOVES IN A DYNAMIC POSITON IN THE PARENT 
+         }
+         STICKY>>THIS IS THE POSITON THAT HAS BREAKPOINTS ,ITS FIXED AT SOME PLACES THEN
+          DISSAPEEARS AT SOME PLACES THEN APPEARS LATER 
+
+          FIXED>>THIS IS THE ONLY PERMANENT POSITION WHEN SET FOR ELEMENTS {
+            MOBILE MENUS ,DASHBOARD NAVIGATION
+          }
+      ]
+      HOW DO WE INTERACT WITH THIS POSTIONS {
+         WE USE FOUR DIRECTIONS TO DO SO {
+            left: YOU WAN TOT MOVE TO THE RIGHT WITH A SPECIFIED MEASUREMENT;
+            right: YOU WAN TOT MOVE TO THE LEFT WITH A SPECIFIED MEASUREMENT;
+            BOTTOM: YOU WAN TOT MOVE TO THE TOP WITH A SPECIFIED MEASUREMENT;
+           TOP: YOU WAN TOT MOVE TO THE BOTTOM WITH A SPECIFIED MEASUREMENT;
+
+      } 
+  }
+}
